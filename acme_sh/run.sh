@@ -16,7 +16,7 @@ for domain in $DOMAINS; do
     DOMAIN_ARR+=(--domain "$domain")
 done
 
-#/root/.acme.sh/acme.sh --register-account -m ${ACCOUNT}
+/root/.acme.sh/acme.sh --register-account -m ${ACCOUNT}
 
 /root/.acme.sh/acme.sh --insecure --issue "${DOMAIN_ARR[@]}" \
 --dns "$DNS_PROVIDER" --yes-I-know-dns-manual-mode-enough-go-ahead-please 
